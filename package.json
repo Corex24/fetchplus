@@ -1,0 +1,63 @@
+{
+  "name": "@corex24/fetchplus",
+  "version": "0.1.0",
+  "description": "A lightweight fetch wrapper with retries, timeouts, and consistent errors.",
+  "type": "module",
+  "license": "MIT",
+  "author": "Corex Anthony",
+  "homepage": "https://github.com/Corex24/fetchplus#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Corex24/fetchplus.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Corex24/fetchplus/issues"
+  },
+  "keywords": [
+    "fetch",
+    "http",
+    "client",
+    "api",
+    "request",
+    "retry",
+    "timeout",
+    "node",
+    "browser",
+    "edge",
+    "lightweight",
+    "typescript",
+    "axios alternative"
+  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist",
+    "engineRequirements.js"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --clean",
+    "dev": "tsup src/index.ts --watch --format esm",
+    "test": "vitest run",
+    "test:api": "tsx examples/basic-usage.ts",
+    "prepublishOnly": "npm run build"
+  },
+  "devDependencies": {
+    "@types/node": "^25.6.0",
+    "tsup": "^8.5.1",
+    "tsx": "^4.21.0",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.5"
+  }
+}

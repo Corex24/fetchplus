@@ -1,0 +1,47 @@
+# Source code (users don't need this, they get compiled dist/)
+src/
+examples/
+
+# Tests
+*.test.ts
+*.test.js
+vitest.config.ts
+
+# Configuration files
+tsconfig.json
+vitest.config.js
+prettier.config.js
+eslint.config.js
+
+# Development
+.vscode/
+.idea/
+.github/
+.git/
+.gitignore
+
+# Documentation (dev-only)
+CONTRIBUTING.md
+CHANGELOG.md
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Other
+.prettierrc
+.eslintignore
+.editorconfig
+
